@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8E8485F320801C650078A463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8485F220801C650078A463 /* AppDelegate.swift */; };
-		8E8485F520801C650078A463 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8485F420801C650078A463 /* ViewController.swift */; };
 		8E8485F820801C650078A463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8485F620801C650078A463 /* Main.storyboard */; };
 		8E8485FA20801C650078A463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E8485F920801C650078A463 /* Assets.xcassets */; };
 		8E8485FD20801C650078A463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8485FB20801C650078A463 /* LaunchScreen.storyboard */; };
 		8E84860820801C650078A463 /* MemeHelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E84860720801C650078A463 /* MemeHelperUITests.swift */; };
+		8EC0FB14208EA2FA002214A6 /* EmoticonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB13208EA2FA002214A6 /* EmoticonsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		8E8485EF20801C650078A463 /* MemeHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8485F220801C650078A463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E8485F420801C650078A463 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E8485F720801C650078A463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E8485F920801C650078A463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E8485FC20801C650078A463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		8E84860320801C650078A463 /* MemeHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E84860720801C650078A463 /* MemeHelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeHelperUITests.swift; sourceTree = "<group>"; };
 		8E84860920801C650078A463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EC0FB13208EA2FA002214A6 /* EmoticonsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				8E8485F220801C650078A463 /* AppDelegate.swift */,
-				8E8485F420801C650078A463 /* ViewController.swift */,
 				8E8485F620801C650078A463 /* Main.storyboard */,
 				8E8485F920801C650078A463 /* Assets.xcassets */,
 				8E8485FB20801C650078A463 /* LaunchScreen.storyboard */,
 				8E8485FE20801C650078A463 /* Info.plist */,
+				8EC0FB13208EA2FA002214A6 /* EmoticonsController.swift */,
 			);
 			path = MemeHelper;
 			sourceTree = "<group>";
@@ -199,8 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E8485F520801C650078A463 /* ViewController.swift in Sources */,
 				8E8485F320801C650078A463 /* AppDelegate.swift in Sources */,
+				8EC0FB14208EA2FA002214A6 /* EmoticonsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
