@@ -11,50 +11,63 @@
     </dependencies>
     <scenes>
         <!--Soundboard-->
-        <scene sceneID="YvJ-8c-Sci">
+        <scene sceneID="d6a-ba-s6S">
             <objects>
-                <viewController id="Lfb-Wk-HbM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ezO-Ta-kjO">
+                <viewController id="SfR-tH-i4P" customClass="SoundboardController" customModule="MemeHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2yj-h6-Zie">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LW1-cL-Zlj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ufc-pe-6C0">
+                                    <size key="itemSize" width="182" height="182"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="YVY-rT-uCD" customClass="CollectionViewCell" customModule="MemeHelper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vs6-D1-vjK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="182" height="182"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVT-9y-TNh">
+                                                    <rect key="frame" x="70" y="81" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="MemeImage" destination="Vs6-D1-vjK" id="7SO-DI-ych"/>
+                                            <outlet property="MemeName" destination="jVT-9y-TNh" id="jE5-JX-wsF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="4HT-6O-P7j"/>
+                        <viewLayoutGuide key="safeArea" id="jET-AJ-qCE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Soundboard" id="bhw-g2-Guo"/>
+                    <tabBarItem key="tabBarItem" title="Soundboard" id="PFf-SV-uYf"/>
+                    <connections>
+                        <outlet property="collectionView" destination="LW1-cL-Zlj" id="oYr-0c-Y3V"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7nO-kR-prJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9hQ-zZ-0gk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="-570"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="4Wz-cp-h9f">
-            <objects>
-                <viewController id="YLx-Ki-ZAv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="u3a-IK-Bgh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="LJM-ou-YLx"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JRD-ry-BR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-838" y="77"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="iff-3l-kKP">
-            <objects>
-                <viewController id="bOl-yJ-dd9" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dqT-eW-qYY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="72a-9z-fe9"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qxF-2Q-tKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-839" y="-681"/>
+            <point key="canvasLocation" x="1208.8" y="-639.13043478260875"/>
         </scene>
         <!--Emoticons-->
         <scene sceneID="tne-QT-ifu">
@@ -143,21 +156,6 @@
             </objects>
             <point key="canvasLocation" x="1029.5999999999999" y="193.85307346326837"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tyc-Ey-hFp">
-            <objects>
-                <viewController id="MBz-xu-Qh2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZLe-8W-fSn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="pRM-uI-SCD"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNh-gm-vdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1" y="377"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nRm-ee-VPg">
             <objects>
@@ -170,7 +168,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="rEr-7Z-fz7"/>
-                        <segue destination="Lfb-Wk-HbM" kind="relationship" relationship="viewControllers" id="LcL-wC-12M"/>
+                        <segue destination="SfR-tH-i4P" kind="relationship" relationship="viewControllers" id="5v7-HX-SgW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smq-Tp-biT" userLabel="First Responder" sceneMemberID="firstResponder"/>

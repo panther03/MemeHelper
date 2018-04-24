@@ -13,6 +13,8 @@
 		8E8485FD20801C650078A463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8485FB20801C650078A463 /* LaunchScreen.storyboard */; };
 		8E84860820801C650078A463 /* MemeHelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E84860720801C650078A463 /* MemeHelperUITests.swift */; };
 		8EC0FB14208EA2FA002214A6 /* EmoticonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB13208EA2FA002214A6 /* EmoticonsController.swift */; };
+		8EC0FB18208F79A4002214A6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB17208F79A4002214A6 /* CollectionViewCell.swift */; };
+		8EC0FB1A208F7BE6002214A6 /* SoundboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB19208F7BE6002214A6 /* SoundboardController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		8E84860720801C650078A463 /* MemeHelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeHelperUITests.swift; sourceTree = "<group>"; };
 		8E84860920801C650078A463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EC0FB13208EA2FA002214A6 /* EmoticonsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonsController.swift; sourceTree = "<group>"; };
+		8EC0FB17208F79A4002214A6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		8EC0FB19208F7BE6002214A6 /* SoundboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundboardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				8E8485FB20801C650078A463 /* LaunchScreen.storyboard */,
 				8E8485FE20801C650078A463 /* Info.plist */,
 				8EC0FB13208EA2FA002214A6 /* EmoticonsController.swift */,
+				8EC0FB17208F79A4002214A6 /* CollectionViewCell.swift */,
+				8EC0FB19208F7BE6002214A6 /* SoundboardController.swift */,
 			);
 			path = MemeHelper;
 			sourceTree = "<group>";
@@ -201,6 +207,8 @@
 			files = (
 				8E8485F320801C650078A463 /* AppDelegate.swift in Sources */,
 				8EC0FB14208EA2FA002214A6 /* EmoticonsController.swift in Sources */,
+				8EC0FB1A208F7BE6002214A6 /* SoundboardController.swift in Sources */,
+				8EC0FB18208F79A4002214A6 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
