@@ -15,6 +15,7 @@
 		8EC0FB14208EA2FA002214A6 /* EmoticonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB13208EA2FA002214A6 /* EmoticonsController.swift */; };
 		8EC0FB18208F79A4002214A6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB17208F79A4002214A6 /* CollectionViewCell.swift */; };
 		8EC0FB1A208F7BE6002214A6 /* SoundboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB19208F7BE6002214A6 /* SoundboardController.swift */; };
+		8EEAC5CD2093A3F300580FD2 /* oof.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EEAC5CC2093A3F300580FD2 /* oof.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8EC0FB13208EA2FA002214A6 /* EmoticonsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonsController.swift; sourceTree = "<group>"; };
 		8EC0FB17208F79A4002214A6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8EC0FB19208F7BE6002214A6 /* SoundboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundboardController.swift; sourceTree = "<group>"; };
+		8EEAC5CC2093A3F300580FD2 /* oof.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = oof.mp3; path = MemeHelper/oof.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		8E8485F120801C650078A463 /* MemeHelper */ = {
 			isa = PBXGroup;
 			children = (
+				8EEAC5CB2093A3DB00580FD2 /* sounds */,
 				8E8485F220801C650078A463 /* AppDelegate.swift */,
 				8E8485F620801C650078A463 /* Main.storyboard */,
 				8E8485F920801C650078A463 /* Assets.xcassets */,
@@ -100,6 +103,14 @@
 				8E84860920801C650078A463 /* Info.plist */,
 			);
 			path = MemeHelperUITests;
+			sourceTree = "<group>";
+		};
+		8EEAC5CB2093A3DB00580FD2 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8EEAC5CC2093A3F300580FD2 /* oof.mp3 */,
+			);
+			path = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8485FD20801C650078A463 /* LaunchScreen.storyboard in Resources */,
+				8EEAC5CD2093A3F300580FD2 /* oof.mp3 in Resources */,
 				8E8485FA20801C650078A463 /* Assets.xcassets in Resources */,
 				8E8485F820801C650078A463 /* Main.storyboard in Resources */,
 			);
@@ -362,7 +374,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DX87AG8A5S;
 				INFOPLIST_FILE = MemeHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = panther.MemeHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -376,7 +390,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DX87AG8A5S;
 				INFOPLIST_FILE = MemeHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = panther.MemeHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";

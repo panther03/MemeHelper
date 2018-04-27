@@ -11,5 +11,4 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MemeImage: UIImageView!
     @IBOutlet weak var MemeName: UILabel!
-    
 }
