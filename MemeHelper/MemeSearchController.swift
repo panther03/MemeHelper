@@ -9,7 +9,8 @@
 import UIKit
 
 class MemeSearchController: UIViewController {
-
+    @IBOutlet weak var queryText: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,5 +22,10 @@ class MemeSearchController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showWebsite" {
+            let kymController = segue.destination as! KYMWebpageController
+            kymController.query = queryText.text!
+        }
+    }
 }

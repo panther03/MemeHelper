@@ -11,12 +11,13 @@ import WebKit
 
 class KYMWebpageController: UIViewController {
     @IBOutlet weak var kymView: WKWebView!
+    var query : String = ""
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
-    func generateURL(query : String) -> URL? {
+    func generateURL() -> URL? {
         let cleaned_query = query.replacingOccurrences(of: " ", with: "_")
         return URL(string:"http://www.knowyourmeme/search?q=\(cleaned_query)")
     }
@@ -24,7 +25,7 @@ class KYMWebpageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let request = URLRequest(url: generateURL(query: "The JoJ")!)
+        let request = URLRequest(url: generateURL()!)
         print(request)
         kymView.load(request)
     }

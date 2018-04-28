@@ -111,12 +111,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWI-ew-EFj">
-                                        <rect key="frame" x="30" y="262" width="315" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1o-U0-fD5">
                                         <rect key="frame" x="161" y="312" width="53" height="30"/>
                                         <state key="normal" title="Search!"/>
@@ -124,18 +118,25 @@
                                             <segue destination="Ig2-z4-qIk" kind="show" identifier="showWebsite" id="yzu-Q5-4QO"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eyk-JU-nFB">
+                                        <rect key="frame" x="30" y="262" width="315" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="FUe-6r-9yU" firstAttribute="centerX" secondItem="AWI-ew-EFj" secondAttribute="centerX" id="4dF-xY-ThA"/>
                                     <constraint firstItem="FUe-6r-9yU" firstAttribute="leading" secondItem="okV-b1-hBg" secondAttribute="leading" id="DRw-5A-lU2"/>
-                                    <constraint firstItem="K1o-U0-fD5" firstAttribute="centerX" secondItem="AWI-ew-EFj" secondAttribute="centerX" id="IaH-c4-GsO"/>
-                                    <constraint firstAttribute="trailing" secondItem="AWI-ew-EFj" secondAttribute="trailing" constant="30" id="LnL-Cx-gWZ"/>
-                                    <constraint firstItem="AWI-ew-EFj" firstAttribute="top" secondItem="FUe-6r-9yU" secondAttribute="bottom" constant="10" id="PKr-HL-Wsg"/>
-                                    <constraint firstItem="AWI-ew-EFj" firstAttribute="centerY" secondItem="okV-b1-hBg" secondAttribute="centerY" id="Q89-jC-CBs"/>
-                                    <constraint firstItem="AWI-ew-EFj" firstAttribute="leading" secondItem="okV-b1-hBg" secondAttribute="leading" constant="30" id="XYR-3a-L3m"/>
-                                    <constraint firstItem="K1o-U0-fD5" firstAttribute="top" secondItem="AWI-ew-EFj" secondAttribute="bottom" constant="20" id="b2U-rq-pbQ"/>
+                                    <constraint firstItem="Eyk-JU-nFB" firstAttribute="leading" secondItem="okV-b1-hBg" secondAttribute="leading" constant="30" id="TAq-po-rnk"/>
+                                    <constraint firstItem="K1o-U0-fD5" firstAttribute="centerX" secondItem="FUe-6r-9yU" secondAttribute="centerX" id="cBr-KX-SyE"/>
+                                    <constraint firstItem="Eyk-JU-nFB" firstAttribute="top" secondItem="FUe-6r-9yU" secondAttribute="bottom" constant="10" id="inp-5f-kVY"/>
+                                    <constraint firstItem="Eyk-JU-nFB" firstAttribute="centerY" secondItem="okV-b1-hBg" secondAttribute="centerY" id="q0v-zw-Gs0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eyk-JU-nFB" secondAttribute="trailing" constant="30" id="sRY-FE-JCO"/>
+                                    <constraint firstItem="K1o-U0-fD5" firstAttribute="top" secondItem="Eyk-JU-nFB" secondAttribute="bottom" constant="20" id="t4C-7j-1Xh"/>
+                                    <constraint firstItem="Eyk-JU-nFB" firstAttribute="centerX" secondItem="okV-b1-hBg" secondAttribute="centerX" id="wfl-oD-DSe"/>
                                     <constraint firstAttribute="trailing" secondItem="FUe-6r-9yU" secondAttribute="trailing" id="xJb-aU-XYr"/>
+                                    <constraint firstItem="Eyk-JU-nFB" firstAttribute="centerX" secondItem="FUe-6r-9yU" secondAttribute="centerX" id="yWH-Iv-L0U"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -150,6 +151,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="pJB-5t-3Gi"/>
                     <connections>
+                        <outlet property="queryText" destination="Eyk-JU-nFB" id="Vfh-o9-u4p"/>
                         <outlet property="searchDisplayController" destination="04w-L7-0nQ" id="e1Y-ya-6EA"/>
                     </connections>
                 </viewController>
@@ -163,7 +165,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2036" y="591"/>
+            <point key="canvasLocation" x="2036" y="590.55472263868069"/>
         </scene>
         <!--Webpage Controller-->
         <scene sceneID="09Z-4q-Vox">
