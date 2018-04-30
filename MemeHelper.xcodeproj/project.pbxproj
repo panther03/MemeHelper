@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E0570762093B74500047843 /* oof.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E0570752093B74400047843 /* oof.mp3 */; };
 		8E05707A2093DFC700047843 /* MemeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0570792093DFC700047843 /* MemeSearchController.swift */; };
 		8E05707C2093E83700047843 /* KYMWebpageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05707B2093E83700047843 /* KYMWebpageController.swift */; };
 		8E8485F320801C650078A463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8485F220801C650078A463 /* AppDelegate.swift */; };
@@ -18,6 +17,9 @@
 		8EC0FB14208EA2FA002214A6 /* EmoticonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB13208EA2FA002214A6 /* EmoticonsController.swift */; };
 		8EC0FB18208F79A4002214A6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB17208F79A4002214A6 /* CollectionViewCell.swift */; };
 		8EC0FB1A208F7BE6002214A6 /* SoundboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB19208F7BE6002214A6 /* SoundboardController.swift */; };
+		8EE989162097ABCA0046B045 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE989152097ABCA0046B045 /* Meme.swift */; };
+		8EE9891A2097BDD50046B045 /* oof.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE989192097BDD50046B045 /* oof.mp3 */; };
+		8EE9891C2097BDE10046B045 /* zucc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE9891B2097BDE00046B045 /* zucc.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8E0570752093B74400047843 /* oof.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = oof.mp3; path = ../../../../../../Downloads/oof.mp3; sourceTree = "<group>"; };
 		8E0570792093DFC700047843 /* MemeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSearchController.swift; sourceTree = "<group>"; };
 		8E05707B2093E83700047843 /* KYMWebpageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYMWebpageController.swift; sourceTree = "<group>"; };
 		8E8485EF20801C650078A463 /* MemeHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +47,9 @@
 		8EC0FB13208EA2FA002214A6 /* EmoticonsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmoticonsController.swift; sourceTree = "<group>"; };
 		8EC0FB17208F79A4002214A6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8EC0FB19208F7BE6002214A6 /* SoundboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundboardController.swift; sourceTree = "<group>"; };
+		8EE989152097ABCA0046B045 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		8EE989192097BDD50046B045 /* oof.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = oof.mp3; path = ../../../../../../Downloads/oof.mp3; sourceTree = "<group>"; };
+		8EE9891B2097BDE00046B045 /* zucc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = zucc.mp3; path = ../../../../../../Downloads/zucc.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				8EC0FB19208F7BE6002214A6 /* SoundboardController.swift */,
 				8E0570792093DFC700047843 /* MemeSearchController.swift */,
 				8E05707B2093E83700047843 /* KYMWebpageController.swift */,
+				8EE989152097ABCA0046B045 /* Meme.swift */,
 			);
 			path = MemeHelper;
 			sourceTree = "<group>";
@@ -114,7 +119,8 @@
 		8EEAC5CB2093A3DB00580FD2 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				8E0570752093B74400047843 /* oof.mp3 */,
+				8EE989192097BDD50046B045 /* oof.mp3 */,
+				8EE9891B2097BDE00046B045 /* zucc.mp3 */,
 			);
 			path = sounds;
 			sourceTree = "<group>";
@@ -203,8 +209,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8485FD20801C650078A463 /* LaunchScreen.storyboard in Resources */,
+				8EE9891C2097BDE10046B045 /* zucc.mp3 in Resources */,
+				8EE9891A2097BDD50046B045 /* oof.mp3 in Resources */,
 				8E8485FA20801C650078A463 /* Assets.xcassets in Resources */,
-				8E0570762093B74500047843 /* oof.mp3 in Resources */,
 				8E8485F820801C650078A463 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +232,7 @@
 			files = (
 				8E8485F320801C650078A463 /* AppDelegate.swift in Sources */,
 				8E05707C2093E83700047843 /* KYMWebpageController.swift in Sources */,
+				8EE989162097ABCA0046B045 /* Meme.swift in Sources */,
 				8E05707A2093DFC700047843 /* MemeSearchController.swift in Sources */,
 				8EC0FB14208EA2FA002214A6 /* EmoticonsController.swift in Sources */,
 				8EC0FB1A208F7BE6002214A6 /* SoundboardController.swift in Sources */,

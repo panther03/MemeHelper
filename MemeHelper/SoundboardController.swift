@@ -17,16 +17,9 @@ class SoundboardController: UIViewController, UICollectionViewDelegate, UICollec
     }
     var audioplayer: AVAudioPlayer!
     
-    let meme_names : [String] = ["Steamed Hams", "друг"]
-    let meme_images : [UIImage] = [
-        UIImage(named:"steamed-hams")!,
-        UIImage(named:"apyr")!
-    ]
-    let meme_audio_urls : [URL?] = [
-        Bundle.main.url(forResource: "oof", withExtension: "mp3"),
-        Bundle.main.url(forResource: "oof", withExtension: "mp3"),
-        Bundle.main.url(forResource: "oof", withExtension: "mp3"),
-        Bundle.main.url(forResource: "oof", withExtension: "mp3"),
+    let memes : [Meme] = [
+        Meme(name: "Roblox Oof", image: UIImage(named:"oof")!, sound: Bundle.main.url(forResource: "oof", withExtension: "mp3")),
+        Meme(name: "The ZUCC", image: UIImage(named:"zucc")!, sound:  Bundle.main.url(forResource: "zucc", withExtension: "mp3"))
     ]
     
     override func viewDidLoad() {
@@ -48,20 +41,20 @@ class SoundboardController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return meme_names.count
+        return memes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         
-        cell.MemeImage.image = meme_images[indexPath.item]
+        cell.MemeImage.image = memes[indexPath.item].image
         cell.MemeImage.frame.size = CGSize(width: cellSize, height: cellSize)
        
-        let str = NSAttributedString(string: meme_names[indexPath.item], attributes: [
+        let str = NSAttributedString(string: memes[indexPath.item].name, attributes: [
             NSAttributedStringKey.foregroundColor : UIColor.black,
             NSAttributedStringKey.strokeColor : UIColor.white,
-            NSAttributedStringKey.strokeWidth: -3,
+            NSAttributedStringKey.strokeWidth: -3.5,
             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 24.0)
             ])
         cell.MemeName.attributedText = str
@@ -76,15 +69,21 @@ class SoundboardController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
-        
+        let asset = AVURLAsset(url: memes[indexPath.item].sound!)
+        UIView.animate(withDuration: CMTimeGetSeconds(asset.duration), delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: [], animations: {
+            cell?.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }, completion: { finished in
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: .curveEaseInOut, animations: {
+                cell?.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: nil
+            )}
+        )
         do {
-            audioplayer = try AVAudioPlayer(contentsOf: meme_audio_urls[indexPath.item]!)
+            audioplayer = try AVAudioPlayer(contentsOf: memes[indexPath.item].sound!)
             audioplayer.play()
         } catch {
             print("Sorry, better ZUCC next time.")
         }
-        
-        cell?.layer.borderWidth = 0.5
     }
 
 }

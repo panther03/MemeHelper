@@ -126,6 +126,7 @@
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="FUe-6r-9yU" firstAttribute="leading" secondItem="okV-b1-hBg" secondAttribute="leading" id="DRw-5A-lU2"/>
                                     <constraint firstItem="Eyk-JU-nFB" firstAttribute="leading" secondItem="okV-b1-hBg" secondAttribute="leading" constant="30" id="TAq-po-rnk"/>
@@ -138,6 +139,9 @@
                                     <constraint firstAttribute="trailing" secondItem="FUe-6r-9yU" secondAttribute="trailing" id="xJb-aU-XYr"/>
                                     <constraint firstItem="Eyk-JU-nFB" firstAttribute="centerX" secondItem="FUe-6r-9yU" secondAttribute="centerX" id="yWH-Iv-L0U"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="VaI-xR-QTb" appends="YES" id="yBm-Q3-QOL"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -152,18 +156,14 @@
                     <navigationItem key="navigationItem" id="pJB-5t-3Gi"/>
                     <connections>
                         <outlet property="queryText" destination="Eyk-JU-nFB" id="Vfh-o9-u4p"/>
-                        <outlet property="searchDisplayController" destination="04w-L7-0nQ" id="e1Y-ya-6EA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ni-kW-BdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="04w-L7-0nQ">
+                <tapGestureRecognizer id="VaI-xR-QTb">
                     <connections>
-                        <outlet property="delegate" destination="Ng5-qo-pBC" id="41T-kw-gkG"/>
-                        <outlet property="searchContentsController" destination="Ng5-qo-pBC" id="p2X-Ja-f5K"/>
-                        <outlet property="searchResultsDataSource" destination="Ng5-qo-pBC" id="c6s-Vf-g3z"/>
-                        <outlet property="searchResultsDelegate" destination="Ng5-qo-pBC" id="OPn-8i-1Tu"/>
+                        <action selector="dismissKeyboardWithSender:" destination="Ng5-qo-pBC" id="AyB-rF-tyZ"/>
                     </connections>
-                </searchDisplayController>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2036" y="590.55472263868069"/>
         </scene>
@@ -215,59 +215,160 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ctQ-HF-gWi">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hL-Fd-TUc">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vAf-a1-Tan">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="199.5"/>
-                                                <state key="normal" title="( ͡° ͜ʖ ͡°)"/>
-                                                <connections>
-                                                    <action selector="basicClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3G-A2-Y3K"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-kJ-YBG">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copied!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44V-fD-IDc">
+                                                        <rect key="frame" x="64" y="0.0" width="59.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hL-Fd-TUc">
+                                                        <rect key="frame" x="71" y="66.5" width="46" height="66.5"/>
+                                                        <state key="normal" title="( ͡° ͜ʖ ͡°)"/>
+                                                        <connections>
+                                                            <action selector="basicClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3G-A2-Y3K"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlT-tA-dod">
+                                                        <rect key="frame" x="75.5" y="133" width="37" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HPg-zA-78a">
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="199.5"/>
-                                                <state key="normal" title="( ͡◉ ͜ʖ ͡◉)"/>
-                                                <connections>
-                                                    <action selector="cuteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1sV-BF-nJX"/>
-                                                </connections>
-                                            </button>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copied!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-yN-U0y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-kJ-YBG">
+                                                        <rect key="frame" x="0.0" y="66.5" width="187.5" height="66.5"/>
+                                                        <state key="normal" title="( ͡◉ ͜ʖ ͡◉)"/>
+                                                        <connections>
+                                                            <action selector="cuteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1sV-BF-nJX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creepy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvx-cL-XSP">
+                                                        <rect key="frame" x="0.0" y="133" width="187.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hZb-Ll-G8o">
                                         <rect key="frame" x="0.0" y="199.5" width="375" height="199"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYk-IW-glc">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ScS-f3-boJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="199"/>
-                                                <state key="normal" title="( ♥ ͜ʖ ♥)"/>
-                                                <connections>
-                                                    <action selector="gunClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0u-ul-bgS"/>
-                                                    <action selector="heartClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Kr-6K-VCw"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYb-v1-Jrr">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copied!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30z-Bw-Wkf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYY-5n-EZ5">
+                                                        <rect key="frame" x="0.0" y="66.5" width="187.5" height="66"/>
+                                                        <state key="normal" title="( ♥ ͜ʖ ♥)"/>
+                                                        <connections>
+                                                            <action selector="heartClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HLf-MT-ie9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hearts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGj-VK-kQY">
+                                                        <rect key="frame" x="0.0" y="132.5" width="187.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="p8J-mZ-C7x">
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="199"/>
-                                                <state key="normal" title="༼ຈل͜ຈ༽"/>
-                                                <connections>
-                                                    <action selector="dongerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hmM-l2-FlV"/>
-                                                </connections>
-                                            </button>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copied!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjg-oH-nld">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYb-v1-Jrr">
+                                                        <rect key="frame" x="0.0" y="66.5" width="187.5" height="66"/>
+                                                        <state key="normal" title="༼ຈل͜ຈ༽"/>
+                                                        <connections>
+                                                            <action selector="dongerClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hmM-l2-FlV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8b-mB-FWp">
+                                                        <rect key="frame" x="0.0" y="132.5" width="187.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FXN-mn-eez">
                                         <rect key="frame" x="0.0" y="398.5" width="375" height="199.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26S-OV-pw6">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-TR-WG8">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="199.5"/>
-                                                <state key="normal" title="┬┴┤( ͡⚆ل͜├┬┴┬"/>
-                                                <connections>
-                                                    <action selector="creepyClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="znN-2C-5ce"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2Q-Y6-g3z">
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copied!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9s-u2-D7s">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26S-OV-pw6">
+                                                        <rect key="frame" x="0.0" y="66.5" width="187.5" height="66.5"/>
+                                                        <state key="normal" title="┬┴┤( ͡⚆ل͜├┬┴┬"/>
+                                                        <connections>
+                                                            <action selector="creepyClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="znN-2C-5ce"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiding" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPp-Pt-YmF">
+                                                        <rect key="frame" x="0.0" y="133" width="187.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aXn-81-c4p">
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="199.5"/>
-                                                <state key="normal" title="(╯ຈل͜ຈ) ╯︵ ┻━┻"/>
-                                                <connections>
-                                                    <action selector="tableFlipClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnl-3T-YP3"/>
-                                                </connections>
-                                            </button>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copied!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SC5-Ib-53E">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2Q-Y6-g3z">
+                                                        <rect key="frame" x="0.0" y="66.5" width="187.5" height="66.5"/>
+                                                        <state key="normal" title="(╯ຈل͜ຈ) ╯︵ ┻━┻"/>
+                                                        <connections>
+                                                            <action selector="tableFlipClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnl-3T-YP3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table Flip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmE-k6-fpW">
+                                                        <rect key="frame" x="0.0" y="133" width="187.5" height="66.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -283,6 +384,14 @@
                         <viewLayoutGuide key="safeArea" id="pMN-cG-3xg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Emoticons" id="dbE-rj-Lxx"/>
+                    <connections>
+                        <outlet property="copied_basic" destination="44V-fD-IDc" id="D1D-fd-Tbr"/>
+                        <outlet property="copied_creepy" destination="n9s-u2-D7s" id="vPV-cr-xz9"/>
+                        <outlet property="copied_cute" destination="Qia-yN-U0y" id="C4v-in-Fyc"/>
+                        <outlet property="copied_donger" destination="yjg-oH-nld" id="YmT-31-xFA"/>
+                        <outlet property="copied_heart" destination="30z-Bw-Wkf" id="Ezb-3d-Uii"/>
+                        <outlet property="copied_tableFlip" destination="SC5-Ib-53E" id="0kC-bN-rSi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

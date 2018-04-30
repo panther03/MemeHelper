@@ -19,7 +19,7 @@ class KYMWebpageController: UIViewController {
     
     func generateURL() -> URL? {
         let cleaned_query = query.replacingOccurrences(of: " ", with: "_")
-        return URL(string:"http://www.knowyourmeme/search?q=\(cleaned_query)")
+        return URL(string:"http://knowyourmeme.com/search?q=\(cleaned_query)")
     }
     
     override func viewDidLoad() {

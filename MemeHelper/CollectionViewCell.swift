@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var MemeImage: UIImageView!

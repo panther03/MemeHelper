@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemeSearchController: UIViewController {
+class MemeSearchController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var queryText: UITextField!
     
     override func viewDidLoad() {
@@ -27,5 +27,10 @@ class MemeSearchController: UIViewController {
             let kymController = segue.destination as! KYMWebpageController
             kymController.query = queryText.text!
         }
+    }
+    
+    @IBAction func dismissKeyboard(sender: AnyObject)
+    {
+        queryText.resignFirstResponder()
     }
 }
