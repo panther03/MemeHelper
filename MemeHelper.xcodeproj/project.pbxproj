@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		8E05707A2093DFC700047843 /* MemeSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0570792093DFC700047843 /* MemeSearchController.swift */; };
 		8E05707C2093E83700047843 /* KYMWebpageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E05707B2093E83700047843 /* KYMWebpageController.swift */; };
+		8E1923E62098E698007004B5 /* jason_bourne.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1923E52098E698007004B5 /* jason_bourne.mp3 */; };
+		8E1923E82098E6EA007004B5 /* oof.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1923E72098E6EA007004B5 /* oof.mp3 */; };
+		8E1923EA2098E6FB007004B5 /* Steamed Hams.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1923E92098E6FB007004B5 /* Steamed Hams.mp3 */; };
+		8E1923EC2098E709007004B5 /* apyr.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1923EB2098E709007004B5 /* apyr.mp3 */; };
+		8E1923EE2098E719007004B5 /* zucc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1923ED2098E719007004B5 /* zucc.mp3 */; };
+		8E1923F02098E72A007004B5 /* mission_impossible.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1923EF2098E72A007004B5 /* mission_impossible.mp3 */; };
 		8E8485F320801C650078A463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8485F220801C650078A463 /* AppDelegate.swift */; };
 		8E8485F820801C650078A463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8485F620801C650078A463 /* Main.storyboard */; };
 		8E8485FA20801C650078A463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E8485F920801C650078A463 /* Assets.xcassets */; };
@@ -18,8 +24,6 @@
 		8EC0FB18208F79A4002214A6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB17208F79A4002214A6 /* CollectionViewCell.swift */; };
 		8EC0FB1A208F7BE6002214A6 /* SoundboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC0FB19208F7BE6002214A6 /* SoundboardController.swift */; };
 		8EE989162097ABCA0046B045 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE989152097ABCA0046B045 /* Meme.swift */; };
-		8EE9891A2097BDD50046B045 /* oof.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE989192097BDD50046B045 /* oof.mp3 */; };
-		8EE9891C2097BDE10046B045 /* zucc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EE9891B2097BDE00046B045 /* zucc.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,12 @@
 /* Begin PBXFileReference section */
 		8E0570792093DFC700047843 /* MemeSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeSearchController.swift; sourceTree = "<group>"; };
 		8E05707B2093E83700047843 /* KYMWebpageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYMWebpageController.swift; sourceTree = "<group>"; };
+		8E1923E52098E698007004B5 /* jason_bourne.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jason_bourne.mp3; sourceTree = "<group>"; };
+		8E1923E72098E6EA007004B5 /* oof.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = oof.mp3; sourceTree = "<group>"; };
+		8E1923E92098E6FB007004B5 /* Steamed Hams.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Steamed Hams.mp3"; sourceTree = "<group>"; };
+		8E1923EB2098E709007004B5 /* apyr.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = apyr.mp3; sourceTree = "<group>"; };
+		8E1923ED2098E719007004B5 /* zucc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zucc.mp3; sourceTree = "<group>"; };
+		8E1923EF2098E72A007004B5 /* mission_impossible.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mission_impossible.mp3; sourceTree = "<group>"; };
 		8E8485EF20801C650078A463 /* MemeHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8485F220801C650078A463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E8485F720801C650078A463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,8 +58,6 @@
 		8EC0FB17208F79A4002214A6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8EC0FB19208F7BE6002214A6 /* SoundboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundboardController.swift; sourceTree = "<group>"; };
 		8EE989152097ABCA0046B045 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
-		8EE989192097BDD50046B045 /* oof.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = oof.mp3; path = ../../../../../../Downloads/oof.mp3; sourceTree = "<group>"; };
-		8EE9891B2097BDE00046B045 /* zucc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = zucc.mp3; path = ../../../../../../Downloads/zucc.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +127,12 @@
 		8EEAC5CB2093A3DB00580FD2 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				8EE989192097BDD50046B045 /* oof.mp3 */,
-				8EE9891B2097BDE00046B045 /* zucc.mp3 */,
+				8E1923ED2098E719007004B5 /* zucc.mp3 */,
+				8E1923EF2098E72A007004B5 /* mission_impossible.mp3 */,
+				8E1923E52098E698007004B5 /* jason_bourne.mp3 */,
+				8E1923E92098E6FB007004B5 /* Steamed Hams.mp3 */,
+				8E1923E72098E6EA007004B5 /* oof.mp3 */,
+				8E1923EB2098E709007004B5 /* apyr.mp3 */,
 			);
 			path = sounds;
 			sourceTree = "<group>";
@@ -209,9 +221,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8485FD20801C650078A463 /* LaunchScreen.storyboard in Resources */,
-				8EE9891C2097BDE10046B045 /* zucc.mp3 in Resources */,
-				8EE9891A2097BDD50046B045 /* oof.mp3 in Resources */,
 				8E8485FA20801C650078A463 /* Assets.xcassets in Resources */,
+				8E1923EA2098E6FB007004B5 /* Steamed Hams.mp3 in Resources */,
+				8E1923EE2098E719007004B5 /* zucc.mp3 in Resources */,
+				8E1923E62098E698007004B5 /* jason_bourne.mp3 in Resources */,
+				8E1923E82098E6EA007004B5 /* oof.mp3 in Resources */,
+				8E1923F02098E72A007004B5 /* mission_impossible.mp3 in Resources */,
+				8E1923EC2098E709007004B5 /* apyr.mp3 in Resources */,
 				8E8485F820801C650078A463 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

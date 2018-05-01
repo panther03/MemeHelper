@@ -18,7 +18,7 @@ class KYMWebpageController: UIViewController {
     }
     
     func generateURL() -> URL? {
-        let cleaned_query = query.replacingOccurrences(of: " ", with: "_")
+        let cleaned_query = query.replacingOccurrences(of: " ", with: "+")
         return URL(string:"http://knowyourmeme.com/search?q=\(cleaned_query)")
     }
     
@@ -28,6 +28,16 @@ class KYMWebpageController: UIViewController {
         let request = URLRequest(url: generateURL()!)
         print(request)
         kymView.load(request)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {

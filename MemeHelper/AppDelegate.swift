@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         let fromView = tabBarController.selectedViewController!.view
         let toView = viewController.view
         
-        UIView.transition(from: fromView!, to: toView!, duration: 0.3, options: [.transitionFlipFromBottom], completion: nil)
+        UIView.transition(from: fromView!, to: toView!, duration: 0.3, options: [.transitionCrossDissolve], completion: nil)
         
         return true
     }

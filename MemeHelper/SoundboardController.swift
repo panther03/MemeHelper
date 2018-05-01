@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class SoundboardController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    var selectedRow : Int = -1
     
     @IBOutlet weak var collectionView: UICollectionView!
     var cellSize : CGFloat {
@@ -19,7 +20,11 @@ class SoundboardController: UIViewController, UICollectionViewDelegate, UICollec
     
     let memes : [Meme] = [
         Meme(name: "Roblox Oof", image: UIImage(named:"oof")!, sound: Bundle.main.url(forResource: "oof", withExtension: "mp3")),
-        Meme(name: "The ZUCC", image: UIImage(named:"zucc")!, sound:  Bundle.main.url(forResource: "zucc", withExtension: "mp3"))
+        Meme(name: "The ZUCC", image: UIImage(named:"zucc")!, sound:  Bundle.main.url(forResource: "zucc", withExtension: "mp3")),
+        Meme(name: "Steamed Hams", image: UIImage(named:"steamed-hams")!, sound: Bundle.main.url(forResource: "Steamed Hams", withExtension: "mp3")),
+        Meme(name: "дpyr", image: UIImage(named:"apyr")!, sound: Bundle.main.url(forResource: "apyr", withExtension: "mp3")),
+        Meme(name: "Jesus Christ it's Jason Bourne", image: UIImage(named:"jason_bourne")!, sound: Bundle.main.url(forResource: "jason_bourne", withExtension: "mp3")),
+        Meme(name: "Mission Impossible Theme", image: UIImage(named:"mission_impossible")!, sound: Bundle.main.url(forResource: "mission_impossible", withExtension: "mp3"))
     ]
     
     override func viewDidLoad() {
@@ -68,12 +73,13 @@ class SoundboardController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedRow = indexPath.item
         let cell = collectionView.cellForItem(at: indexPath)
         let asset = AVURLAsset(url: memes[indexPath.item].sound!)
         UIView.animate(withDuration: CMTimeGetSeconds(asset.duration), delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: [], animations: {
             cell?.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         }, completion: { finished in
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: .curveEaseInOut, animations: {
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: [], animations: {
                 cell?.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil
             )}
@@ -85,5 +91,4 @@ class SoundboardController: UIViewController, UICollectionViewDelegate, UICollec
             print("Sorry, better ZUCC next time.")
         }
     }
-
 }
